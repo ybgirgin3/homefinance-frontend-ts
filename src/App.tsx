@@ -1,9 +1,10 @@
 import React from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
-import HomeScreen from './src/Screens/HomeScreen';
-import CreateExpenseScreen from './src/Screens/Expenses/CreateExpenseScreen';
-import Header from './src/Components/Header';
+import HomeScreen from './Screens/HomeScreen';
+import Header from './Components/Header';
+import CreateScreen from './Screens/CreateScreen';
+
 import './App.css';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" Component={HomeScreen} />
-          <Route path="/expenses" Component={CreateExpenseScreen} />
+          <Route path="/create" Component={CreateScreen} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
